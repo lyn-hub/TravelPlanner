@@ -13,6 +13,10 @@ public class Place implements Serializable {
     private String name;
     private double lon;
     private double lat;
+    private String address;
+
+
+
     @ManyToOne
     private Route route;
 
@@ -34,6 +38,14 @@ public class Place implements Serializable {
 
     public Route getRoute() {
         return route;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public void setId(int id) {

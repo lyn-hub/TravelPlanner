@@ -17,7 +17,7 @@ public class Route implements Serializable {
     private User user;
 
     @OneToMany(mappedBy = "route", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Place> place;
+    private List<Place> places;
 
     private int startdate;
 
@@ -30,7 +30,7 @@ public class Route implements Serializable {
     }
 
     public List<Place> getPlace() {
-        return place;
+        return places;
     }
 
     public int getStartdate() {
@@ -45,8 +45,8 @@ public class Route implements Serializable {
         this.user = user;
     }
 
-    public void setPlace(List<Place> place) {
-        this.place = place;
+    public void setPlace(List<Place> places) {
+        this.places = places;
     }
 
     public void setStartdate(int startdate) {
